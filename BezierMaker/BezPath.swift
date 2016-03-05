@@ -17,27 +17,7 @@ func g() {
         var lastNode: BezGraphicalNode? = nil
         var curNode: BezGraphicalNode? = nil
         for element in currentElements.reverse() {
-            //need to draw 3 things 1) bezierPath, 2) node, 3) controlpoint
             curNode = BezGraphicalNode(pathPair: element, next: lastNode)
-//            view.layer.addSublayer(curNode)
-//            //create control points and add to sublayer
-//            switch (element.1.action) {
-//            case .Move:
-//                draw 1 node
-//            case .AddLine:
-//                draw 1 node
-//            case .AddCurve:
-//                draw 1 node
-//                draw 2 control points
-//            case .AddQuadraticCurve:
-//                draw 1 node
-//                draw 1 control point
-//            case .AddArc:
-//                draw 1 node endpoint
-//                draw 1 control point center
-//            case .Close:
-//                draw 0 nodes
-//            }
             lastNode = curNode
         }
     }
